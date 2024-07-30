@@ -2,21 +2,21 @@
   "name": "@fedimint/fedimint-client-ts",
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.cjs"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --p ./tsconfig-build.json && vite build",
-    "build-preview": "tsc --p ./tsconfig.json && vite build --config vite-preview.config.ts",
-    "preview": "yarn build-preview && vite preview",
+    "clean": "rm -rf dist",
+    "build": "rm -rf dist && tsup lib/index.ts --dts --format esm,cjs",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@fedimint/fedimint-client-ts": "workspace:*",
     "@fedimint/fedimint-client-wasm": "workspace:*"
   },
   "devDependencies": {

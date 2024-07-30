@@ -1,0 +1,16 @@
+{
+  "name": "@fedimint/fedimint-client-wasm",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "pkg/fedimint_client_wasm.js",
+  "module": "pkg/fedimint_client_wasm.js",
+  "types": "pkg/fedimint_client_wasm.d.ts",
+  "files": [
+    "pkg/*"
+  ],
+  "exports": {
+    "main": "./pkg/fedimint_client_wasm.js",
+    "module": "./pkg/fedimint_client_wasm.js",
+    "types": "./pkg/fedimint_client_wasm.d.ts"
+  }
+}
