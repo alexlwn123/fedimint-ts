@@ -15,6 +15,7 @@
     "prepare": "pnpm simple-git-hooks",
     "release": "pnpm run build && pnpm changeset publish",
     "changeset": "changeset",
+    "changeset:prepublish": "pnpm run build",
     "version": "changeset version",
     "typecheck": "pnpm run --r --parallel typecheck",
     "format": "prettier --write .",
